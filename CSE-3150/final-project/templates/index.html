@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <title>GPA Calculator</title>
+</head>
+<body>
+    <h1>GPA Calculator</h1>
+
+    <h2>Add Course</h2>
+    <form method="POST">
+        <input name="name" placeholder="Course Name" required><br>
+        <input name="semester" placeholder="Semester" required><br>
+        <input name="credits" placeholder="Credits" type="number" step="0.1" required><br>
+        <input name="grade" placeholder="Grade (A, B+, etc)" required><br>
+        Major? <input type="checkbox" name="isMajor"><br>
+        <button type="submit" name="add_course">Add Course</button>
+    </form>
+
+    <p>{{ message }}</p>
+    <p><strong>Overall GPA:</strong> {{ overall_gpa }}</p>
+
+    <h2>Filter Courses</h2>
+    <form method="get">
+        Semester: <input name="semester" value="{{ filter_semester }}"><br>
+        Major? 
+        <select name="major">
+            <option value="" {% if not filter_major %}selected{% endif %}>All</option>
+            <option value="yes" {% if filter_major == 'yes' %}selected{% endif %}>Yes</option>
+            <option value="no" {% if filter_major == 'no' %}selected{% endif %}>No</option>
+        </select><br>
+        <button type="submit">Apply Filter</button>
+    </form>
+
+    <p><strong>Filtered GPA:</strong> {{ filtered_gpa }}</p>
+
+    {% if courses %}
+    <h2>Courses Added</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Semester</th>
+            <th>Credits</th>
+            <th>Grade</th>
+            <th>Major?</th>
+            <th>Action</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ course.name }}</td>
+            <td>{{ course.semester }}</td>
+            <td>{{ course.credits }}</td>
+            <td>{{ course.grade }}</td>
+            <td>{{ "Yes" if course.isMajor else "No" }}</td>
+            <td><a href="{{ url_for('delete_course', index=loop.index0) }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No courses match the filter.</p>
+    {% endif %}
+</body>
+</html>

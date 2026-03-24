@@ -1,0 +1,31 @@
+Programming practices
+1. Practicing constructors: ECPointerString.cpp
+Now we continue the implementation of ECStringPtr class. We will finish the Duplicate() method implementation. Our focus here is the move
+constructor.
+2. ECTime.h/cpp
+This exercise lets you practice operator overloading. You need to implement a time class, which contains hour, minute and second. For example,
+suppose the time length is 1 hour, 20 minutes and 5 seconds. Then hour is 1, minute is 20 and second is 5. The constructor of this time class
+takes hour/minute/second as parameters. There is also a GetTime method for getting the time in hour/minute/second. The most important method
+is the operator+, which return the time as the sum of two time objects.
+Note: second and minute are within 0 to 59, while there is no limit on hours.
+3. Class and STL container: ECAccounts.h/cpp
+Implement a simple bank account: it has account number, account holder's name. Then you would like to store accounts in some container. What
+do you need for that?
+Assume account numbers are distinct.
+4. Inheritance and virtual.
+Open ECShapes.cpp. There is a simple class hierarchy: Shape, Rectangle and Square. There is a single interface function CalcArea().
+(i) First implement the simple class hierarachy
+(ii) Then try to make it more generic by using templates...
+5. Open ECOverrideTest.cpp. Experiment with code for overriding. Try to change the provided code to perform overriding correctly.
+Question: where to place "virtual", base class or sub-class if you just want to have ONE virtual?
+Question: does parameter matter?
+Question: does return value matter?
+6. Continue from the previous code. Now let us experiment with memory deallocation. We will add destructors (with some print statements so we
+know whether objects are deallocated). We will investigate how to properly deallocate memory in a class hierarchy.
+7 (if still have time). Implementing a rooted binary tree. ECRBT.h/cpp
+In this exercise, you need to implement a rooted binary tree. Here, each node has an integer id. A node is either a leaf or has two child
+nodes.
+There are two classes: the tree node class and the tree class. Rooted binary tree is represented by its root node. For the node class, you
+need to implement basic functions of the node (constructor and destructor). You also need to implement methods for setting up the node (i.e.,
+set and get the child nodes). Another method you need to implement is, getting the number of leaf nodes below the node (if the current node is
+a leaf, it is counted).

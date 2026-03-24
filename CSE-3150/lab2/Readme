@@ -1,0 +1,29 @@
+Reviews:
+1. String: don't use C-style string in C++. Easy to use than C-style: concatnation, I/O, etc. Memory: how does C++ string support variable length? the string itself may be in stack, but the buffer of the string is in the heap. 
+2. Function: make parameter const if the function is not supposed to modify it (say just print).
+3. Memory model: stack (local variable; automatic allocate/deallocate during function calls) vs heap (request memory on-the-fly; you have to manage it yourself!). 
+4: Pointer: address of memory; be careful: don't use pointer to local variable outside of function.  
+5. Array and buffer overflow 
+
+
+Part two: coding & practice
+
+0. Memory layout practice.
+Open the file called ECMem.cpp. It is very simple. The point is getting to know how the memory is allocated and the exact memory layout. 
+
+1. Buffer overflow
+First open: ECBufferOverflow.cpp and complete the tasks as listed in comments 
+
+Now open: ECBufferOverflow2.cpp. We will do some more advanced stuff here...
+
+2. Array and pointer
+
+Open ECArrayPointer.cpp. 
+First, complete the code for array using index
+Second, do the same thing using pointers, not index.
+
+3. Coding: Open ECStringSep.cpp write a function foo that take a parameter string, and separates its characters and returns it.  Eg - foo("xyz" ) -> "x,y,z"
+
+
+4. Coding: Open ECSwapCase.cpp and finish the ECSwapCase function. You have to take a string input and swap the case of each character. Eg - ECSwapCase("Hello") -> "hELLO"
+

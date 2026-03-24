@@ -1,0 +1,13 @@
+1. STL vector ECSumListVec.cpp
+You are given a vector of integer. You want to sum over the elements and return the sum.
+Here, first use indexing to access elements. Then change the code to use range loops.
+2. STL set ECSumListSet.cpp
+This is almost exactly the same as above. The only difference now is, we use STLset instead of vector.
+4. STL practice ECDistinct.cpp
+You are given an array of integers (in STL vector). You want to find the distinct numbers and how many times they appear in the array. For
+example, suppose you are given [1,2,3,2,1,4]. Then there are 4 distinct numbers 1, 2, 3, and 4, which appears 2,2,1, and 1 times in the array.
+You want to represent such information in a STL map<int,int>. Here, the key of the map is a distinct number, and the corresponding value is
+the number of times this key appears in the array.
+6. Working with template ECCommonNumGen.cpp
+You want to find a common number in two arrays. Implement a more generic common number finding function that works for different types. The
+input type is vector.

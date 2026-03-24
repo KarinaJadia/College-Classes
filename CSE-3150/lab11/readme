@@ -1,0 +1,17 @@
+This week has only two programming exercises.
+
+1. Observer pattern
+We practice the Observer pattern. Imagine you work at an online news provider called TrendingNews.inc. TrendingNews makes money by charging subscribers. There are two types of subscribers: (a) Pay-per-click: pay a fixed fee ($1 per read), and (b) Pay-by-year: those who pay $100 for an entire year. Here, you need to implement the following classes. (i) ECTrendingNews: this is the news provider; it keeps track of subscribers and provides news; and keep track of revenue. (ii) ECSubscriber: generic subscribers to the news. (iii) ECPayPerClickSubscriber: pay-per-click subscriber. For simplicity, we assume the subscriber will pay for each news update. (iv): ECContractSubscriber: subscribers who pay $100 annual fee.
+
+You may assume we only consider the period of one year. Also, no refund is given for canceling subscription, and annual fee is charged for all contract subscribers, regardless whether they have charged before.6. Lazy initialization (proxy design pattern)
+
+2. Lazy initialization (proxy design pattern)
+Sometimes when initializing large objects, you don't want to initialize the entire objects all at once. This is because perhaps some of these objects are not needed after all. Lazy initialization is a common technique for speeding up object creation by only creating large objects only when needed. Now let us practice this technique here.
+
+You have a large document with multiple pages. Some pages may contain images. For simplicity, let us assume there is at most one image per page, and the page without image is empty (no texts). When the document is created, the constructor takes a list of image record (the page where the image is located at, and the filename to load the image from the hard drive). The main interface function of the document is:
+
+void Show(int page);
+
+which displays the page on the screen. Of course, if this page contains an image, you need to show the image too.
+
+Now you can load all the images upon the creation of the document. But this can be slow. Try the starter code and you will see what I mean. Your task is applying lazy initialization technique to speed up.

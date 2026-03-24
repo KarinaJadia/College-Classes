@@ -1,0 +1,21 @@
+Programming practices
+1. STL algorithm: [ECCopyGen.cpp]
+Write a function that copies items from one container to the other container.
+2. Implement a container class: ECList and EListNode classes [ECList.cpp,ECListNode.h]
+This is a singly linked list. You should support several basic functionalities.
+* List traversal
+* List insertion/deletion
+3. Implement two classes as follows.[ECStudent.h, ECClass.cpp, ECClass.h]
+* ECStudent:
+Attributes: name and score
+Methods: Get and set scores.
+* ECClass:
+Attributes: list of students
+Methods: for grading, etc. Check the provided header files.
+4. Practicing constructors: [ECPointerString.cpp]
+Now get back to ECStringPtr class. Implement a new function called Duplicate() which return a ECStringPtr which contains a string pointer to a
+string which contains two tandem copies of the current string.
+One key thing to study is the move constructor.
+5. Move constructor again: [ECMatrix.h/cpp]
+Implement the constructors (copy and move) for ECMatrix class. The focus is on the differences between copy and move constructors. Investigate
+what constructors are called under different situations.

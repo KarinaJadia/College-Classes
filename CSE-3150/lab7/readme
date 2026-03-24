@@ -1,0 +1,9 @@
+Practice of inheritance and multiple inheritance
+Part one.
+You want to model the life on earth. We look at two organisms: human and spider. We also have a common base class called ECLife.
+First read the provided code for these classes.
+Now we need to implement a third organism: Spiderman. Practice multiple inheritance by completing the implementation of Spiderman. The current implementation doesn't quite work.
+Part two.
+Now open the file: ECRTTI.cpp. We are to practice the so-called RTTI: run-time type information. Suppose we are given a pointer to an object.
+What type of object is it? This is a frequently needed function, and is especially useful when there are inheritance.
+Now read the simple code. How to know what kind of objects pointed by a pointer? How to test if two pointers point to the same kind or not.

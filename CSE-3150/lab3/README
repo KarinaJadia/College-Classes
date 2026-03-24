@@ -1,0 +1,40 @@
+## 1. Using `const` with Pointers [ECConstPointer.cpp]
+You are given an array of integers.
+Write a function that:
+- Loops through the array.
+- Sums the values.
+- Prints the total.
+To ensure the array is not modified, use `const` in your function declaration.
+Check the starter code and decide how to properly declare and define this function.
+---
+## 2. Function Pointers and Sorting [ECSortFuncPtr.cpp]
+Function pointers are a powerful feature in C++.
+In this exercise, implement a sorting function that takes:
+- A list of integers.
+- A function pointer that compares two integers `x` and `y`, returning:
+- `true` if `x` should come before `y`.
+- `false` otherwise.
+Start by defining the function pointer type as shown in the starter code, then implement the sorting logic using it.
+---
+## 3. Casting in C++ [ECCastTest.cpp]
+Practice different types of casting in C++.
+Review the starter code and fill in the missing casting operations.
+Use the most appropriate and safest form of casting for each situation:
+- `static_cast`
+- `dynamic_cast`
+- `reinterpret_cast`
+- `const_cast`
+---
+## 4. Fixing a String Manipulation Bug [TrimString.cpp]
+Write a function that modifies a string `x` so that after the function call,
+`x` contains only its prefix of **up to five characters**.
+A piece of code has already been written for this, but it doesn't work correctly.
+Your task: **find and fix the error** so the function behaves as intended.
+---
+## 5. String Inversion Practice [ECReverseInt.cpp]
+You are given a string representing an **unsigned decimal number** (e.g., `"1102"`).
+Return a new string that represents the **inverse** of this number (e.g., `"2011"`).
+**Constraints:**
+- The input is guaranteed to be a valid decimal number.
+- The output should not contain leading zeros.
+- You can assume the input does not have leading zeros.

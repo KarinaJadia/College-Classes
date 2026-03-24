@@ -1,0 +1,23 @@
+Practice of object orientation in C++
+1. Suppose you need to implement a Window class for graphical user interface. The Window can be either rectangular or circular. There is an existing Shape class. Now we first use an inheritance based design for Window. That is, let Window be a subclass of Shape. Here we assume Window is always rectangular. Window has a lot of other functionalities. For now, we only concern getting the area of the window.
+2. We continue from the previous question. Now we use object composition based design for Window. That is, let Window has a Shape object. This way, Window can be any shape: rectangular, round, or other kind. The Window class has different constructors, which can construct window of different shape.
+3. We now consider the light bulb design as taught in the video lectures. Here, you have a light bulb, which can be set to on/off. We first implement the simple client and server design, where the button class has a reference to a light bulb.
+4. We continue from the previous question. We now implement the inheritance based design. There is an abstract button class. To control the lightbulb, we create a subclass called LightBulbButton.
+5. We continue from the previous question. We now implement the composition based design. There is a button class, which has a pointer to button server object. To control the lightbulb, we create a subclass of button server called LightBulbButtonServer. Note: this design is more flexible: a button may be in the state that it doesn't control anything.
+6. Practice of OO design
+We are to model motor vehicle. Now what kind of classes do we need? This is an open-ended exercise with no best answer. Here are things we need to model.
+* First, we are interested in how a vehicle is made of. Components of motor vehicle: engine, wheel, lights, etc.
+(a) Engine: three types (four-cylinder, six-cylinder, eletric), which costs $1000, $1500 and $3000 each.
+(b) Wheel: two size (17 inch and 19 inch), costs $100 and $150 each respectively.
+(c) Light: only one size, cost $50 each.
+(d) We skip all other parts. Our vehicle is rather ill-equipped. Oh well..
+* Second, we are interestd in different kinds of motor vehicle: car, truck, motocycle, bus, etc.
+(a) car: car can have any kind of engine, and always have four wheels, 4 lights.
+Car: no discount. 10% sales tax.
+(b) truck: only allowing six-cylinder engine and can have any number of wheels. 8 lights. Truck can replace engine (with the same cost of the
+orginal engine). $1000 discount. 8% sales tax.
+(c) motocycle: only four cylinder engine. Only 17 inch wheel (x2). 2 lights. $100 discount. 15% sales tax.
+(d) We ignore all other vehicle types for now.
+* We are interested in the cost (price) of motor vehicle. We like to know how much a motor vehicle will cost to a customer. We assume the
+price of a motor vehicle is equal to 1.5 times of the cost of its components (this counts the cost to put these components together), subtract certain discount (if any), plus certain tax (depending on the type of vehicle).
+Now with these information, what classes do we need and what methods?
